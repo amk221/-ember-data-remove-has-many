@@ -1,5 +1,10 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+name: {{@model.name}}<br>
 
-{{outlet}}
+roles:
+{{#each @model.roles as |role|}}
+  {{role.name}},
+{{/each}}
+
+<br><br>
+
+<button type="button" {{on "click" this.save}}>Save</button>
