@@ -36,6 +36,7 @@ export default class ApplicationController extends Controller {
     //   "roles": []
     // }
     //
+    // ...but the role will not be removed from the user in the client :(
 
     adminRole._delete = true;
 
