@@ -43,7 +43,7 @@ export default class ApplicationController extends Controller {
     this.model.name = 'Fred (changed)';
     this.model.roles = [adminRole];
 
-    this.model.save().then(() => {
+    return this.model.save().then(() => {
       adminRole._delete = false;
     });
   }
