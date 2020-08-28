@@ -8,7 +8,7 @@ module("Unit | Controller | application", function (hooks) {
     this.store = this.owner.lookup("service:store");
   });
 
-  test("admin role should be removed from user", async function (assert) {
+  test("✔ admin role should be removed from user", async function (assert) {
     assert.expect(2);
 
     const user = await this.store.find("user", 1);
@@ -23,7 +23,7 @@ module("Unit | Controller | application", function (hooks) {
     assert.deepEqual(user.roles.toArray(), [], "admin role is removed from user");
   });
 
-  test("admin role should be removed from user", async function (assert) {
+  test("✔ admin role should be removed from user", async function (assert) {
     assert.expect(3);
 
     const user = await this.store.find("user", 1);
@@ -42,7 +42,7 @@ module("Unit | Controller | application", function (hooks) {
     assert.deepEqual(user.roles.toArray(), [otherRole], "admin role is removed from user");
   });
 
-  test("admin role should be removed from user", async function (assert) {
+  test("✘ admin role should be removed from user", async function (assert) {
     assert.expect(1);
 
     const user = await this.store.find("user", 1);
