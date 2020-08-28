@@ -56,6 +56,6 @@ module("Unit | Controller | application", function (hooks) {
 
     await user.save();
 
-    assert.deepEqual(user.roles, [], "admin role is removed from user");
+    assert.deepEqual(user.roles, [], "admin role is removed from user"); // This doesn't work :(
   });
 });
